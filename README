@@ -1,0 +1,13 @@
+A simple GTK clock written in C. This was an experiment to figure out
+the GTK libraries.
+
+The clock consists out of a few rings, each represents a certain part
+of the current time (seconds, minutes, hours, days, months).
+
+No Makefile, but compiling is pretty simple:
+
+gcc -Wall -g clock_date.c clock.c -o clock \ 
+   `pkg-config --cflags gtk+-2.0` `pkg-config --libs gtk+-2.0 cairo`
+
+There might be better ways of redrawing the whole canvas, but that
+was outside the scope of the intended goal.
